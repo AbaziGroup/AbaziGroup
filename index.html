@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abazi Group - Diversified Business Portfolio</title>
+  <meta name="description" content="Abazi Group is a diversified business organization with companies in construction, real estate, hospitality, sanitary services, and transportation across Europe.">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1f2937;
+      --secondary: #facc15;
+      --accent: #2563eb;
+    }
+    
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+      line-height: 1.6;
+      color: #333;
+    }
+   
+.logo {
+    font-family: 'Georgia', serif;
+  }
+  
+  .logo-icon {
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--secondary);
+    background: none;
+    color: var(--secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    font-weight: bold;
+    border-radius: 50%;
+  }
+  
+  .logo-main {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+  }
+  
+  .logo-sub {
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.8;
+    margin-top: 3px;
+  }
+  
+    /* Logo Styles */
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .logo-icon {
+      width: 50px;
+      height: 50px;
+      background-color: var(--secondary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      font-size: 1.3rem;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-main {
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .logo-sub {
+      font-size: 0.7rem;
+      font-weight: 400;
+      opacity: 0.8;
+      line-height: 1;
+      margin-top: 3px;
+    }
+
+    header.hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 120px 20px;
+      position: relative;
+    }
+
+    header.hero h1 {
+      font-size: 3.5em;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    header.hero p {
+      font-size: 1.3em;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn {
+      background-color: var(--secondary);
+      color: black;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s ease;
+      font-size: 1.1em;
+    }
+
+    .btn:hover {
+      background-color: #e6b800;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+
+    .btn-outline:hover {
+      background-color: rgba(255,255,255,0.1);
+    }
+
+    nav {
+      background-color: var(--primary);
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #374151;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    section {
+      padding: 4rem 0;
+    }
+
+    h2 {
+      margin-bottom: 1.5rem;
+      color: var(--primary);
+      font-size: 2.2em;
+      position: relative;
+      padding-bottom: 10px;
+      text-align: center;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+      width: 80px;
+      height: 4px;
+      background-color: var(--secondary);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    form input, form textarea, form select {
+      width: 100%;
+      padding: 12px;
+      margin-top: 15px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-family: inherit;
+      font-size: 1em;
+    }
+
+    form button {
+      margin-top: 1.5rem;
+      background-color: var(--accent);
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1em;
+      transition: background-color 0.3s ease;
+    }
+
+    form button:hover {
+      background-color: #1d4ed8;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .company-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .company-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .company-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .company-card-content {
+      padding: 1.5rem;
+    }
+
+    .company-card h3 {
+      margin-top: 0;
+      color: var(--primary);
+      font-size: 1.5em;
+    }
+
+    .company-card .location {
+      color: #666;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-bottom: 1rem;
+    }
+
+    .company-card .btn {
+      width: 100%;
+      text-align: center;
+    }
+
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      margin-top: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      background-color: var(--primary);
+      color: white;
+      padding: 3rem 0;
+      margin-top: 3rem;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-column h3 {
+      color: var(--secondary);
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      font-size: 1.2em;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 0.8rem;
+    }
+
+    .footer-column a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-column a:hover {
+      color: var(--secondary);
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* Company specific colors */
+    .construction { --company-color: #facc15; }
+    .sanitar { --company-color: #2563eb; }
+    .restaurant { --company-color: #dc2626; }
+    .real-estate { --company-color: #059669; }
+    .transport { --company-color: #7c3aed; }
+
+    .company-card.construction .btn { background-color: #facc15; }
+    .company-card.sanitar .btn { background-color: #2563eb; color: white; }
+    .company-card.restaurant .btn { background-color: #dc2626; color: white; }
+    .company-card.real-estate .btn { background-color: #059669; color: white; }
+    .company-card.transport .btn { background-color: #7c3aed; color: white; }
+
+    @media (max-width: 768px) {
+      header.hero {
+        padding: 80px 20px;
+      }
+      
+      header.hero h1 {
+        font-size: 2.5em;
+      }
+      
+      nav {
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+      
+      section {
+        padding: 2rem 0;
+      }
+      
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="container">
+      <a href="#" class="logo" style="justify-content: center; margin-bottom: 2rem; color: white;">
+        <div class="logo-icon" style="background-color: var(--secondary);">AG</div>
+        <div class="logo-text">
+          <div class="logo-main">ABAZI</div>
+          <div class="logo-sub">GROUP</div>
+        </div>
+      </a>
+      <h1>Abazi Group</h1>
+      <p>A diversified business organization with companies in construction, real estate, hospitality, sanitary services, and transportation across Europe</p>
+      <div style="display: flex; gap: 1rem; justify-content: center;">
+        <a href="#companies" class="btn">Our Companies</a>
+        <a href="#contact" class="btn btn-outline">Contact Us</a>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#about">About Group</a>
+    <a href="#companies">Our Companies</a>
+    <a href="#values">Our Values</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <div class="container">
+      <h2>About Abazi Group</h2>
+      <p style="max-width: 800px; margin: 0 auto; text-align: center;">Founded with a vision for excellence and growth, Abazi Group has expanded from its roots in North Macedonia to establish successful businesses across Europe. Our diverse portfolio reflects our commitment to quality and innovation across multiple industries.</p>
+    </div>
+  </section>
+
+  <section id="companies" style="background-color: #f8f9fa;">
+    <div class="container">
+      <h2>Our Companies</h2>
+      <div class="card-grid">
+        <div class="company-card construction">
+          <img src="https://c4.wallpaperflare.com/wallpaper/61/259/616/sand-volvo-excavator-truck-the-ground-hd-wallpaper-preview.jpg"lib=rb-1.2.1&auto=format&f alt="Abazi Construction">
+          <div class="company-card-content">
+            <h3>Abazi Construction</h3>
+            <div class="location">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                "/>
+                "/>
+              </svg>
+              Tetovo, North Macedonia
+            </div>
+            <p>Professional excavation, landscaping, grading and site preparation services with modern equipment and skilled operators.</p>
+            <a href="construction/index.html/abaziConstruction/" class="btn">Visit Website</a>
+          </div>
+        </div>
+
+        <div class="company-card sanitar">
+          <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Sanitar Abazi">
+          <div class="company-card-content">
+            <h3>Sanitar Abazi</h3>
+            <div class="location">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+              </svg>
+              Zurich, Switzerland
+            </div>
+            <p>High-quality sanitary services including installation, maintenance, and repair of plumbing systems for residential and commercial properties.</p>
+            <a href="sanitar/sanitar.html/sanitar.html" class="btn">Visit Website</a>
+          </div>
+        </div>
+S
+        <div class="company-card restaurant">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Restaurant Promenade">
+          <div class="company-card-content">
+            <h3>Restaurant Promenade</h3>
+            <div class="location">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+              </svg>
+              Zurich, Switzerland
+            </div>
+            <p>Elegant dining experience offering Mediterranean cuisine with a modern twist in the heart of Zurich.</p>
+            <a href="promenade/prom.html/prom.html" class="btn">Visit Website</a>
+          </div>
+        </div>
+
+        <div class="company-card real-estate">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Abazi Real Estate">
+          <div class="company-card-content">
+            <h3>Abazi Real Estate</h3>
+            <div class="location">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+              </svg>
+              Tetovo, North Macedonia
+            </div>
+            <p>Comprehensive real estate services including property sales, rentals, and investment consulting in North Macedonia.</p>
+            <a href="realestate/estate.htm/estate.html" class="btn">Visit Website</a>
+          </div>
+        </div>
+
+        <!-- New Abazi Trans Company -->
+        <div class="company-card transport">
+          <img src="https://www.in-freight.com/wp-content/uploads/2025/03/Logistics-Truck.png" alt="Abazi Trans">
+          <div class="company-card-content">
+            <h3>Abazi Trans</h3>
+            <div class="location">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+              </svg>
+              Tetovo, North Macedonia & Zurich, Switzerland
+            </div>
+            <p>Reliable transportation and logistics services with modern fleet for domestic and international shipments.</p>
+            <a href="trans/abazitrans/trans.html" class="btn">Visit Website</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="values">
+    <div class="container">
+      <h2>Our Core Values</h2>
+      <div class="card-grid">
+        <div class="company-card">
+          <div class="company-card-content">
+            <h3>Quality</h3>
+            <p>We maintain the highest standards in all our operations, ensuring excellence in every product and service we deliver.</p>
+          </div>
+        </div>
+        <div class="company-card">
+          <div class="company-card-content">
+            <h3>Integrity</h3>
+            <p>Honesty and transparency guide our business relationships with clients, partners, and employees.</p>
+          </div>
+        </div>
+        <div class="company-card">
+          <div class="company-card-content">
+            <h3>Innovation</h3>
+            <p>We embrace new technologies and creative solutions to stay ahead in our diverse industries.</p>
+          </div>
+        </div>
+        <div class="company-card">
+          <div class="company-card-content">
+            <h3>Community</h3>
+            <p>We're committed to giving back to the communities where we operate through various initiatives.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="background-color: #f8f9fa;">
+    <div class="container">
+      <h2>Contact the Group</h2>
+      <div class="card-grid">
+        <div>
+          <h3 style="text-align: left; padding-bottom: 10px; border-bottom: 2px solid var(--secondary);">Headquarters</h3>
+          <p><strong>Address:</strong> Tetovo, North Macedonia</p>
+          <p><strong>Email:</strong> group@abazi.com</p>
+          <p><strong>Phone:</strong> +389 79 336 242</p>
+          
+          <h3 style="text-align: left; margin-top: 2rem; padding-bottom: 10px; border-bottom: 2px solid var(--secondary);">Switzerland Office</h3>
+          <p><strong>Address:</strong> Zurich, Switzerland</p>
+          <p><strong>Email:</strong> zurich@abazi.com</p>
+          <p><strong>Phone:</strong> +41 44 123 4567</p>
+        </div>
+        
+        <div>
+          <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <select required>
+              <option value="">Select Company</option>
+              <option>Abazi Group (General Inquiry)</option>
+              <option>Abazi Construction</option>
+              <option>Sanitar Abazi</option>
+              <option>Restaurant Promenade</option>
+              <option>Abazi Real Estate</option>
+              <option>Abazi Trans</option>
+            </select>
+            <textarea rows="6" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <a href="#" class="logo" style="color: white; margin-bottom: 1rem;">
+            <div class="logo-icon" style="background-color: var(--secondary);">AG</div>
+            <div class="logo-text">
+              <div class="logo-main">ABAZI</div>
+              <div class="logo-sub">GROUP</div>
+            </div>
+          </a>
+          <p>A diversified business organization with operations in Europe across multiple industries.</p>
+        </div>
+        <div class="footer-column">
+          <h3>Our Companies</h3>
+          <ul>
+            <li><a href="construction/">Abazi Construction</a></li>
+            <li><a href="sanitar/">Sanitar Abazi</a></li>
+            <li><a href="restaurant/">Restaurant Promenade</a></li>
+            <li><a href="real-estate/">Abazi Real Estate</a></li>
+            <li><a href="transport/">Abazi Trans</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#values">Values</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Connect</h3>
+          <ul>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 Abazi Group. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
